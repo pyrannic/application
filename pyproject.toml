@@ -1,0 +1,37 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.fastapi]
+entrypoint = "main:app"
+
+[project]
+name = "pyrannic-app"
+version = "1.0.0"
+description = "The skeleton application for the Pyrannic framework."
+readme = "README.md"
+keywords = ["pyrannic", "framework"]
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "pyrannic>=0.5.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "pytest-mock>=3.15.1",
+    "ruff>=0.15.12",
+]
+
+[pytest]
+mock_use_standalone_module = true
+
+[project.urls]
+Homepage = "https://pyrannic.github.io/framework"
+Documentation = "https://pyrannic.github.io/framework"
+Repository = "https://github.com/pyrannic/application"
+Issues = "https://github.com/pyrannic/application/issues"
+Changelog = "https://pyrannic.github.io/application/release-notes"
