@@ -1,10 +1,3 @@
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
-[tool.fastapi]
-entrypoint = "main:app"
-
 [project]
 name = "pyrannic-app"
 version = "1.0.0"
@@ -26,12 +19,8 @@ dev = [
     "ruff>=0.15.12",
 ]
 
+[tool.fastapi]
+entrypoint = "main:app"
+
 [pytest]
 mock_use_standalone_module = true
-
-[project.urls]
-Homepage = "https://pyrannic.github.io/framework"
-Documentation = "https://pyrannic.github.io/framework"
-Repository = "https://github.com/pyrannic/application"
-Issues = "https://github.com/pyrannic/application/issues"
-Changelog = "https://pyrannic.github.io/application/release-notes"
